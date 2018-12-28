@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<dico:dictionnaire
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:dico='http://myGame/tux'
+    xsi:schemaLocation='http://myGame/tux dico.xsd'>
+    <dico:mot niveau="1">code</dico:mot>
+    <dico:mot niveau="1">acte</dico:mot>
+    <dico:mot niveau="1">dell</dico:mot>
+    <dico:mot niveau="1">nit</dico:mot>
+    <dico:mot niveau="2">famille</dico:mot>
+    <dico:mot niveau="2">acteur</dico:mot>
+    <dico:mot niveau="2">clavier</dico:mot>
+    <dico:mot niveau="3">poisson</dico:mot>
+    <dico:mot niveau="3">pomme</dico:mot>
+    <dico:mot niveau="3">etudiant</dico:mot>
+    <dico:mot niveau="3">animal</dico:mot>
+    <dico:mot niveau="4">ordinateur</dico:mot>
+    <dico:mot niveau="4">portable</dico:mot>
+    <dico:mot niveau="5">informatique</dico:mot>
+    <dico:mot niveau="3">conexion</dico:mot>
+    <dico:mot niveau="5">complexe</dico:mot>
+
+</dico:dictionnaire>

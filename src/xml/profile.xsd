@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0"
+           targetNamespace="http://myGame/tux"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tux="http://myGame/tux"
+           elementFormDefault="qualified">
+
+    <!-- Racine profile -->
+
+    <xs:element name="profile" type="tux:Profile"/>
+
+    <!--- Type Profile -->
+
+    <xs:complexType name="Profile">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="avatar" type="xs:string"/>
+            <xs:element name="birthday" type="xs:date"/>
+            <xs:element name="games" type="tux:Games"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <!-- Type Games -->
+
+    <xs:complexType name="Games">
+        <xs:sequence>
+            <xs:element name="game" type="tux:Game" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+      <!-- Type Game -->
+
+    <xs:complexType name="Game">
+        <xs:complexContent>
+            <xs:extension base="tux:TypeA">
+                    <xs:attribute name="date" type="xs:date"/>
+                    <xs:attribute name="found" type="xs:string" use="optional"/>   <!-- rtfm -->
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!-- Type TypeA -->
+
+    <xs:complexType name="TypeA">
+        <xs:sequence>
+
+                <xs:element name="time" type="xs:int" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="word" type="tux:Word" minOccurs="0" maxOccurs="1"/>
+
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+    <!-- Type Word -->
+
+    <xs:complexType name="Word">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="level" type="xs:int"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+
+</xs:schema>
